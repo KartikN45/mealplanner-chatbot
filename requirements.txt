@@ -1,6 +1,6 @@
-﻿Flask
-flask-cors
-gunicorn
-requests
-python-dotenv
-google-generativeai
+﻿Flask==3.0.3
+Flask-Cors==4.0.0
+requests==2.31.0
+python-dotenv==1.0.1
+google-generativeai==0.7.2
+gunicorn==23.0.0

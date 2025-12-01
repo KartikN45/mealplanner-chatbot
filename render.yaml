@@ -1,7 +1,16 @@
 ﻿services:
   - type: web
     name: mealplanner-chatbot
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    env: python
+    region: singapore
     plan: free
+    buildCommand: ""
+    startCommand: "gunicorn app:app"
+    autoDeploy: true
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: EDAMAM_APP_ID
+        sync: false
+      - key: EDAMAM_APP_KEY
+        sync: false
